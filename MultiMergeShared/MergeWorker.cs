@@ -584,7 +584,7 @@ namespace MultiMerge
                 {
                     foreach (var pendingEdit in pendingEdits)
                     {
-                        var localItem = workspace.GetLocalItemForServerItem(pendingEdit.ServerItem);
+                        var localItem = workspace.TryGetLocalItemForServerItem(pendingEdit.ServerItem);
                         if (!string.IsNullOrEmpty(localItem))
                         {
                             var branches = new List<string>();
